@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  background-color: #efefef;
+}
+
+.container{
+  position: relative;
+  top: 0;
+  left: 250px;
+  width: calc(100vw - 250px);
+  height: 100vh;
+  transition: all .3s;
+  background-color: #efefef;
+}
+
+.container.active{
+  left: 0px;
+  width: 100vw;
+}

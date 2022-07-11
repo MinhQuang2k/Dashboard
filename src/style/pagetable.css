@@ -1,0 +1,49 @@
+.box__wrapper{
+    padding-top: 80px; 
+    padding-left: 30px; 
+    padding-right: 30px;
+    background-color: #efefef;
+}
+
+.box__route{
+    font-size: 15px; 
+    font-weight: 400; 
+    color: rgb(117, 117, 117); 
+    padding-bottom: 15px; 
+}
+
+.table__wrapper{
+    padding: 10px;
+    background-color: white;
+}
+
+
+.table__wrapper h2{
+    font-size: 24px; 
+    font-weight: 500; 
+    margin-bottom: 20px;
+}
+
+.line-bottom{
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.customer-img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin: -10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.appCustomer-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.438);
+}
