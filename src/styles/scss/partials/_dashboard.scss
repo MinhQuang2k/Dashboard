@@ -1,0 +1,52 @@
+.dashboard {
+  .item-box {
+    .box-item {
+      background-color: $color-white;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      display: flex;
+      height: 5.5rem;
+      .icon-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.25rem;
+        color: $color-white;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+      }
+      .item-body {
+        flex: 3;
+        padding: 5px 10px;
+        font-size: 1.15rem;
+        font-weight: 600;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .char-box {
+    background: $color-white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+  }
+  .bg-blue {
+    background-color: $color-blue;
+  }
+  .bg-pink {
+    background-color: $color-pink;
+  }
+  .bg-violet {
+    background-color: $color-violet;
+  }
+  .bg-orange {
+    background-color: $color-orange;
+  }
+}
+
+.mt-2 {
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,160 @@
+.table-box {
+  width: 100%;
+  background-color: $color-white;
+  border-radius: 5px;
+  margin-top: 1rem;
+  h1 {
+    padding: 10px 16px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  table {
+    width: 100%;
+    .ant-table-thead > tr > th {
+      background: $color-white;
+      font-weight: bold;
+    }
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 7px 16px;
+    }
+    .group-button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 7px 16px;
+    }
+    .group-button > button:first-child {
+      margin-right: 1rem;
+    }
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1.5rem;
+      margin: 9px 16px;
+    }
+    .icon-fail {
+      color: red;
+    }
+    .icon-success {
+      color: green;
+    }
+  }
+
+  .form-box {
+    padding: 16px 16px;
+  }
+  .input-box {
+    height: 3rem;
+  }
+  .input-box.ant-select-single:not(.ant-select-customize-input)
+    .ant-select-selector {
+    height: 3rem;
+    padding: 8px 11px;
+  }
+  .input-box.ant-select-single
+    .ant-select-selector
+    .ant-select-selection-search {
+    top: 8px;
+  }
+  .img-avatar {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .box-img {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 1rem;
+  }
+  .box-group-button {
+    text-align: right;
+    margin-top: 2rem;
+  }
+  .box-group-button > button:first-child {
+    margin-right: 1rem;
+  }
+  .box-group-button > button:last-child {
+    margin-left: 1rem;
+  }
+  .flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.pagination-box {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-green.ant-btn-primary {
+  border-color: $color-green;
+  background: $color-green;
+  transition: opacity 0.3s;
+}
+
+.btn-line.ant-btn-primary {
+  border-color: $color-line;
+  background: $color-line;
+  transition: opacity 0.3s;
+  color: grey;
+}
+.btn-red.ant-btn-primary {
+  border-color: $color-red;
+  background: $color-red;
+  transition: opacity 0.3s;
+}
+.btn-blue.ant-btn-primary {
+  border-color: $color-blue;
+  background: $color-blue;
+  transition: opacity 0.3s;
+}
+.btn-green:hover,
+.btn-line:hover,
+.btn-blue:hover,
+.btn-red:hover {
+  opacity: 0.8;
+}
+
+.text-line {
+  color: $color-gray;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.icon-line {
+  color: $color-text;
+}
+
+.group-button-bottom {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 99;
+}
+.group-button-bottom > button:first-child {
+  margin-right: 2rem;
+}
+.border-bottom {
+  border-bottom: 1px solid #f0f0f0;
+  margin-top: 1rem;
+}
+.max-width {
+  width: 100%;
+}
