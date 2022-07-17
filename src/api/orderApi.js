@@ -22,7 +22,7 @@ const orderApi = {
                 reference: order.reference,
                 quantity: order.products.length,
                 amount: order.amount,
-                customer: customers.find(c => c.id == order.customerId).lastname,
+                customer: customers.find(c => Number(c.id) === Number(order.customerId)).lastname,
                 orderDate: order.orderDate,
                 shippedDate: order.shippedDate,
 
@@ -50,7 +50,7 @@ const orderApi = {
         let products = db.products;
         let orderOne = []
         if (id) {
-            orderOne = orders.find(c => c.id == id)
+            orderOne = orders.find(c => Number(c.id) === Number(id))
         }
         return {
             order: orderOne,
@@ -82,7 +82,7 @@ const orderApi = {
     update(data) {
         let orders = getOrders();
         orders = orders.map(order => {
-            if (order.id == data.id) {
+            if (Number(order.id) === Number(data.id)) {
                 return {
                     id: Number(data?.id),
                     reference: data?.reference,
@@ -105,7 +105,7 @@ const orderApi = {
     },
     remove(id) {
         let orders = getOrders();
-        orders = orders.filter(c => c.id != id)
+        orders = orders.filter(c => Number(c.id) !== Number(id))
         localStorage.setItem('orders', JSON.stringify(orders));
         return id
     }

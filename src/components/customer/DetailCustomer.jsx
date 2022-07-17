@@ -1,13 +1,10 @@
 import { Breadcrumb, Button, Col, Form, Input, Row } from "antd";
-import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  addCustomer,
-  updateCustomer,
-  getOneCustomer,
-  customersSelector,
-} from "../../slices/reducer/customer";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  addCustomer, customersSelector, getOneCustomer, updateCustomer
+} from "../../slices/reducer/customer";
 
 const DetailCustomer = () => {
   const navigate = useNavigate();

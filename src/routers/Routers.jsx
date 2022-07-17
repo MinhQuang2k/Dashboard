@@ -1,12 +1,12 @@
 import Sidebar from "../components/common/Sidebar";
+import DetailCustomer from "../components/customer/DetailCustomer";
+import DetailOrder from "../components/order/DetailOrder";
+import DetailProduct from "../components/product/DetailProduct";
+import About from "../page/About";
+import Customer from "../page/Customer";
 import Dashboard from "../page/Dashboard";
 import Order from "../page/Order";
-import DetailOrder from "../components/order/DetailOrder";
-import Customer from "../page/Customer";
-import DetailCustomer from "../components/customer/DetailCustomer";
-import About from "../page/About";
 import Product from "../page/Product";
-import DetailProduct from "../components/product/DetailProduct";
 
 export const routes = [
   {

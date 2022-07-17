@@ -1,6 +1,5 @@
-import React from "react";
-import { Button } from "antd";
 import { PlusOutlined, SearchOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const AddSearch = ({ setVisible, path }) => {

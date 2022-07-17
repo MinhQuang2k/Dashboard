@@ -1,15 +1,15 @@
 import { DeleteFilled, EditFilled } from "@ant-design/icons";
 import { Breadcrumb, Button, Pagination } from "antd";
-import AddSearch from "../components/table/AddSearch";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {
-  ordersSelector,
-  getOrders,
-  deleteOrder,
-} from "../slices/reducer/order";
 import SearchOrder from "../components/order/SearchOrder";
+import AddSearch from "../components/table/AddSearch";
+import {
+  deleteOrder,
+  getOrders,
+  ordersSelector,
+} from "../slices/reducer/order";
 
 const Order = () => {
   const [visibleSearch, setVisibleSearch] = useState(false);

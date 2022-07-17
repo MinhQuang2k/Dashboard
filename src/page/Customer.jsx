@@ -12,8 +12,8 @@ import SearchCustomer from "../components/customer/SearchCustomer";
 import AddSearch from "../components/table/AddSearch";
 import {
   customersSelector,
-  getCustomers,
   deleteCustomer,
+  getCustomers,
 } from "../slices/reducer/customer";
 
 const Customer = () => {

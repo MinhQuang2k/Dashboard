@@ -1,13 +1,13 @@
 import { Breadcrumb, Button, Col, Form, Input, Row, Select } from "antd";
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   addProduct,
-  updateProduct,
   getOneProduct,
   productsSelector,
+  updateProduct,
 } from "../../slices/reducer/product";
-import { useEffect } from "react";
 const { Option } = Select;
 
 const DetailProduct = () => {
@@ -40,7 +40,9 @@ const DetailProduct = () => {
     if (params?.id) {
       form.setFieldsValue({
         name: product?.name,
-        category: categories.find((c) => c.id == product?.categoryId)?.name,
+        category: categories.find(
+          (c) => Number(c.id) === Number(product?.categoryId)
+        )?.name,
         numInStock: product?.numInStock,
         unitPrice: product?.unitPrice,
         categoryId: product?.categoryId,

@@ -1,5 +1,4 @@
-import React from "react";
-import { Breadcrumb, Pagination, Button } from "antd";
+import { Breadcrumb } from "antd";
 const About = () => {
   return (
     <div>

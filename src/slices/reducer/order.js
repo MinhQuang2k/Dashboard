@@ -117,7 +117,7 @@ const ordersSlice = createSlice({
             state.isLoading = true;
         },
         [deleteOrder.fulfilled]: (state, action) => {
-            state.data = state.data.filter(d => d.id != action.payload);
+            state.data = state.data.filter(d => Number(d.id) !== Number(action.payload));
             state.pagination.totalRow -= 1;
             state.isLoading = false;
         },

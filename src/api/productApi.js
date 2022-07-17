@@ -25,7 +25,7 @@ const productApi = {
             data: products.slice(skip, skip + per_page).map(product => {
                 return {
                     ...product,
-                    category: categories.find(category => category.id == product.categoryId).name
+                    category: categories.find(category => Number(category.id) === Number(product.categoryId)).name
                 }
             }),
             pagination: {
@@ -39,7 +39,7 @@ const productApi = {
         let products = getProducts()
         let categories = db.categories
         let oneProduct = []
-        if (id) oneProduct = products.find(c => c.id == id)
+        if (id) oneProduct = products.find(c => Number(c.id) === Number(id))
         return {
             product: oneProduct,
             categories
@@ -60,7 +60,7 @@ const productApi = {
     update(data) {
         let products = getProducts();
         products = products.map(c => {
-            if (c.id == data.id) {
+            if (Number(c.id) === Number(data.id)) {
                 return {
                     id: data?.id,
                     name: data?.name,
@@ -75,7 +75,7 @@ const productApi = {
     },
     remove(id) {
         let products = getProducts();
-        products = products.filter(c => c.id != id)
+        products = products.filter(c => Number(c.id) !== Number(id))
         localStorage.setItem('products', JSON.stringify(products));
         return id
     }

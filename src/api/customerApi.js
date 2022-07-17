@@ -34,7 +34,7 @@ const customerApi = {
     },
     getOne(id) {
         let customers = getCustomers()
-        return customers.find(c => c.id == id)
+        return customers.find(c => Number(c.id) === Number(id))
     },
     create(data) {
         let customers = getCustomers()
@@ -45,7 +45,7 @@ const customerApi = {
     update(data) {
         let customers = getCustomers();
         customers = customers.map(c => {
-            if (c.id == data.id) {
+            if (Number(c.id) === (data.id)) {
                 return data
             }
             return c
@@ -54,7 +54,7 @@ const customerApi = {
     },
     remove(id) {
         let customers = getCustomers();
-        customers = customers.filter(c => c.id != id)
+        customers = customers.filter(c => Number(c.id) !== Number(id))
         localStorage.setItem('customers', JSON.stringify(customers));
         return id
     }

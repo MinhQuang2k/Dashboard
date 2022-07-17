@@ -45,7 +45,7 @@ const DetailOrder = () => {
 
   const handleDeleteProduct = (product) => {
     let array = [...listProduct];
-    const index = array.findIndex((a) => a.id == product.id);
+    const index = array.findIndex((a) => Number(a.id) === Number(product.id));
     array.splice(index, 1);
     setListProduct(array);
     subQuantity();
@@ -73,7 +73,9 @@ const DetailOrder = () => {
     if (params?.id) {
       form.setFieldsValue({
         customerId: order?.customerId,
-        customer: customers.find((c) => c.id == order?.customerId)?.lastname,
+        customer: customers.find(
+          (c) => Number(c.id) === Number(order?.customerId)
+        )?.lastname,
         reference: order?.reference,
         amount: order?.amount,
         quantity: order?.products.length,
@@ -279,7 +281,9 @@ const ModelAdd = ({
     setIsModalVisible(false);
   };
   const onChangeCategory = (value) => {
-    setListProduct(products.filter((p) => p.categoryId == value));
+    setListProduct(
+      products.filter((p) => Number(p.categoryId) === Number(value))
+    );
     form.setFieldsValue({
       product: null,
     });

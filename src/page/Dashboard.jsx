@@ -1,25 +1,24 @@
-import React from "react";
-import { Row, Col } from "antd";
 import {
-  ShoppingFilled,
-  LikeFilled,
-  SmileFilled,
   DashboardFilled,
+  LikeFilled,
+  ShoppingFilled,
+  SmileFilled,
 } from "@ant-design/icons";
-import { Chart, Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
+import { Col, Row } from "antd";
 import {
-  Chart as ChartJS,
-  LinearScale,
-  CategoryScale,
   BarElement,
-  PointElement,
-  LineElement,
-  Legend,
-  Tooltip,
-  Title,
+  CategoryScale,
+  Chart as ChartJS,
   Filler,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
 } from "chart.js";
+import { Chart, Line } from "react-chartjs-2";
 
 ChartJS.register(
   LinearScale,
