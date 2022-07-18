@@ -45,7 +45,7 @@ const customerApi = {
     update(data) {
         let customers = getCustomers();
         customers = customers.map(c => {
-            if (Number(c.id) === (data.id)) {
+            if (Number(c.id) === Number(data.id)) {
                 return data
             }
             return c
